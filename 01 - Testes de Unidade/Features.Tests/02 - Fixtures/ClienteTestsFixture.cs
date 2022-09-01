@@ -16,7 +16,7 @@ namespace Features.Tests
                 Guid.NewGuid(),
                 "Matheus",
                 "Oliveira",
-                DateTime.Now.AddYears(-2),
+                DateTime.Now.AddYears(-20),
                 "mathreis1999@gmail.com",
                 true,
                 DateTime.Now);
@@ -31,7 +31,7 @@ namespace Features.Tests
                 "",
                 "",
                 DateTime.Now,
-                "edu2edu.com",
+                "mathreis1999@gmail.com",
                 true,
                 DateTime.Now);
 
