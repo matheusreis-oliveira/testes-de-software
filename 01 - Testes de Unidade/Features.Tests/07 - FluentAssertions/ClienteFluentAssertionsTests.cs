@@ -8,15 +8,14 @@ namespace Features.Tests
     public class ClienteFluentAssertionsTests
     {
         private readonly ClienteTestsAutoMockerFixture _clienteTestsFixture;
-        readonly ITestOutputHelper _outputHelper;
+        private readonly ITestOutputHelper _outputHelper;
 
-        public ClienteFluentAssertionsTests(ClienteTestsAutoMockerFixture clienteTestsFixture, 
+        public ClienteFluentAssertionsTests(ClienteTestsAutoMockerFixture clienteTestsFixture,
                                             ITestOutputHelper outputHelper)
         {
             _clienteTestsFixture = clienteTestsFixture;
             _outputHelper = outputHelper;
         }
-        
 
         [Fact(DisplayName = "Novo Cliente Válido")]
         [Trait("Categoria", "Cliente Fluent Assertion Testes")]
@@ -28,11 +27,11 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             //Assert.True(result);
             //Assert.Equal(0, cliente.ValidationResult.Errors.Count);
 
-            // Assert 
+            // Assert
             result.Should().BeTrue();
             cliente.ValidationResult.Errors.Should().HaveCount(0);
         }
@@ -47,11 +46,11 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             //Assert.False(result);
             //Assert.NotEqual(0, cliente.ValidationResult.Errors.Count);
 
-            // Assert 
+            // Assert
             result.Should().BeFalse();
             cliente.ValidationResult.Errors.Should().HaveCountGreaterOrEqualTo(1, "deve possuir erros de validação");
 

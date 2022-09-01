@@ -13,7 +13,7 @@ namespace Demo.Tests
             // Assert
             Assert.IsType<Funcionario>(funcionario);
         }
-        
+
         [Fact]
         public void FuncionarioFactory_Criar_DeveRetornarTipoDerivadoPessoa()
         {

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using MediatR;
+using System.Collections.Generic;
 using System.Linq;
-using MediatR;
 
 namespace Features.Clientes
 {
@@ -9,7 +9,7 @@ namespace Features.Clientes
         private readonly IClienteRepository _clienteRepository;
         private readonly IMediator _mediator;
 
-        public ClienteService(IClienteRepository clienteRepository, 
+        public ClienteService(IClienteRepository clienteRepository,
                               IMediator mediator)
         {
             _clienteRepository = clienteRepository;

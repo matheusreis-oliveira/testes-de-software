@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Bogus;
+﻿using Bogus;
 using Bogus.DataSets;
 using Features.Clientes;
 using Moq.AutoMock;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Features.Tests

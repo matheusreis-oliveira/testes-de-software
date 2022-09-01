@@ -1,10 +1,9 @@
-﻿using System.Linq;
-using System.Threading;
-using Features.Clientes;
+﻿using Features.Clientes;
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using MediatR;
 using Moq;
+using System.Threading;
 using Xunit;
 
 namespace Features.Tests
@@ -12,7 +11,7 @@ namespace Features.Tests
     [Collection(nameof(ClienteAutoMockerCollection))]
     public class ClienteServiceFluentAssertionTests
     {
-        readonly ClienteTestsAutoMockerFixture _clienteTestsAutoMockerFixture;
+        private readonly ClienteTestsAutoMockerFixture _clienteTestsAutoMockerFixture;
 
         private readonly ClienteService _clienteService;
 
@@ -38,8 +37,8 @@ namespace Features.Tests
             // Assert
             cliente.EhValido().Should().BeTrue();
 
-            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Adicionar(cliente),Times.Once);
-            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m=>m.Publish(It.IsAny<INotification>(),CancellationToken.None),Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Adicionar(cliente), Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Once);
         }
 
         [Fact(DisplayName = "Adicionar Cliente com Falha")]
@@ -74,17 +73,17 @@ namespace Features.Tests
             // Act
             var clientes = _clienteService.ObterTodosAtivos();
 
-            // Assert 
+            // Assert
             //Assert.True(clientes.Any());
             //Assert.False(clientes.Count(c => !c.Ativo) > 0);
-            
+
             // Assert
             clientes.Should().HaveCountGreaterOrEqualTo(1).And.OnlyHaveUniqueItems();
             clientes.Should().NotContain(c => !c.Ativo);
 
             _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.ObterTodos(), Times.Once);
 
-            _clienteService.ExecutionTimeOf(c=>c.ObterTodosAtivos())
+            _clienteService.ExecutionTimeOf(c => c.ObterTodosAtivos())
                 .Should()
                 .BeLessOrEqualTo(50.Milliseconds(),
                     "é executado milhares de vezes por segundo");

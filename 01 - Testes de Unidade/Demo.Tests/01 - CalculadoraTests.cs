@@ -18,7 +18,7 @@ namespace Demo.Tests
         }
 
         [Theory]
-        [InlineData(1,1,2)]
+        [InlineData(1, 1, 2)]
         [InlineData(2, 2, 4)]
         [InlineData(4, 2, 6)]
         [InlineData(7, 3, 10)]

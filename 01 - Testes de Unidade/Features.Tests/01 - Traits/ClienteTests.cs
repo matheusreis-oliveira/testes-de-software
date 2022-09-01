@@ -1,5 +1,5 @@
-﻿using System;
-using Features.Clientes;
+﻿using Features.Clientes;
+using System;
 using Xunit;
 
 namespace Features.Tests
@@ -7,7 +7,7 @@ namespace Features.Tests
     public class ClienteTests
     {
         [Fact(DisplayName = "Novo Cliente Válido")]
-        [Trait("Categoria","Cliente Trait Testes")]
+        [Trait("Categoria", "Cliente Trait Testes")]
         public void Cliente_NovoCliente_DeveEstarValido()
         {
             // Arrange
@@ -23,7 +23,7 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             Assert.True(result);
             Assert.Equal(0, cliente.ValidationResult.Errors.Count);
         }
@@ -45,7 +45,7 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             Assert.False(result);
             Assert.NotEqual(0, cliente.ValidationResult.Errors.Count);
         }

@@ -24,7 +24,6 @@ namespace Demo.Tests
             Assert.Contains("OOP", funcionario.Habilidades);
         }
 
-
         [Fact]
         public void Funcionario_Habilidades_JuniorNaoDevePossuirHabilidadeAvancada()
         {
@@ -35,14 +34,13 @@ namespace Demo.Tests
             Assert.DoesNotContain("Microservices", funcionario.Habilidades);
         }
 
-
         [Fact]
         public void Funcionario_Habilidades_SeniorDevePossuirTodasHabilidades()
         {
             // Arrange & Act
             var funcionario = FuncionarioFactory.Criar("Eduardo", 15000);
 
-            var habilidadesBasicas = new []
+            var habilidadesBasicas = new[]
             {
                 "Lógica de Programação",
                 "OOP",

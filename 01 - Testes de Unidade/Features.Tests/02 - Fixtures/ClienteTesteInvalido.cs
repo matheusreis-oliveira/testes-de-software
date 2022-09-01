@@ -22,7 +22,7 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             Assert.False(result);
             Assert.NotEqual(0, cliente.ValidationResult.Errors.Count);
         }

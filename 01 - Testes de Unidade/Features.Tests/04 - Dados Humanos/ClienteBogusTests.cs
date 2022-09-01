@@ -11,7 +11,6 @@ namespace Features.Tests
         {
             _clienteTestsFixture = clienteTestsFixture;
         }
-        
 
         [Fact(DisplayName = "Novo Cliente Válido")]
         [Trait("Categoria", "Cliente Bogus Testes")]
@@ -23,7 +22,7 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             Assert.True(result);
             Assert.Equal(0, cliente.ValidationResult.Errors.Count);
         }
@@ -38,7 +37,7 @@ namespace Features.Tests
             // Act
             var result = cliente.EhValido();
 
-            // Assert 
+            // Assert
             Assert.False(result);
             Assert.NotEqual(0, cliente.ValidationResult.Errors.Count);
         }

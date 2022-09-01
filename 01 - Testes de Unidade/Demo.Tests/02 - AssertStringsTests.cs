@@ -17,8 +17,6 @@ namespace Demo.Tests
             Assert.Equal("Eduardo Pires", nomeCompleto);
         }
 
-
-
         [Fact]
         public void StringsTools_UnirNomes_DeveIgnorarCase()
         {
@@ -31,8 +29,6 @@ namespace Demo.Tests
             // Assert
             Assert.Equal("EDUARDO PIRES", nomeCompleto, true);
         }
-
-
 
         [Fact]
         public void StringsTools_UnirNomes_DeveConterTrecho()
@@ -47,7 +43,6 @@ namespace Demo.Tests
             Assert.Contains("ardo", nomeCompleto);
         }
 
-
         [Fact]
         public void StringsTools_UnirNomes_DeveComecarCom()
         {
@@ -61,7 +56,6 @@ namespace Demo.Tests
             Assert.StartsWith("Edu", nomeCompleto);
         }
 
-
         [Fact]
         public void StringsTools_UnirNomes_DeveAcabarCom()
         {
@@ -74,7 +68,6 @@ namespace Demo.Tests
             // Assert
             Assert.EndsWith("res", nomeCompleto);
         }
-
 
         [Fact]
         public void StringsTools_UnirNomes_ValidarExpressaoRegular()

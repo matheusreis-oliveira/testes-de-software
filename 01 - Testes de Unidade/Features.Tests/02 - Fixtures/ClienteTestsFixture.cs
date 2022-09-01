@@ -1,12 +1,12 @@
-﻿using System;
-using Features.Clientes;
+﻿using Features.Clientes;
+using System;
 using Xunit;
 
 namespace Features.Tests
 {
     [CollectionDefinition(nameof(ClienteCollection))]
     public class ClienteCollection : ICollectionFixture<ClienteTestsFixture>
-    {}
+    { }
 
     public class ClienteTestsFixture : IDisposable
     {

@@ -15,7 +15,6 @@ namespace Demo.Tests
             Assert.Throws<DivideByZeroException>(() => calculadora.Dividir(10, 0));
         }
 
-
         [Fact]
         public void Funcionario_Salario_DeveRetornarErroSalarioInferiorPermitido()
         {

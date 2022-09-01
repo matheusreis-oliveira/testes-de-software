@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Demo
 {
@@ -26,7 +24,7 @@ namespace Demo
 
         public void DefinirSalario(double salario)
         {
-            if(salario < 500) throw new Exception("Salario inferior ao permitido");
+            if (salario < 500) throw new Exception("Salario inferior ao permitido");
 
             Salario = salario;
             if (salario < 2000) NivelProfissional = NivelProfissional.Junior;
@@ -38,7 +36,6 @@ namespace Demo
         {
             var habilidadesBasicas = new List<string>()
             {
-                
                 "Lógica de Programação",
                 "OOP"
             };
@@ -50,6 +47,7 @@ namespace Demo
                 case NivelProfissional.Pleno:
                     Habilidades.Add("Testes");
                     break;
+
                 case NivelProfissional.Senior:
                     Habilidades.Add("Testes");
                     Habilidades.Add("Microservices");
