@@ -8,7 +8,7 @@ namespace Demo.Tests
         public void Funcionario_Habilidades_NaoDevePossuirHabilidadesVazias()
         {
             // Arrange & Act
-            var funcionario = FuncionarioFactory.Criar("Eduardo", 10000);
+            var funcionario = FuncionarioFactory.Criar("Matheus", 10000);
 
             // Assert
             Assert.All(funcionario.Habilidades, habilidade => Assert.False(string.IsNullOrWhiteSpace(habilidade)));
@@ -18,7 +18,7 @@ namespace Demo.Tests
         public void Funcionario_Habilidades_JuniorDevePossuirHabilidadeBasica()
         {
             // Arrange & Act
-            var funcionario = FuncionarioFactory.Criar("Eduardo", 1000);
+            var funcionario = FuncionarioFactory.Criar("Matheus", 1000);
 
             // Assert
             Assert.Contains("OOP", funcionario.Habilidades);
@@ -28,7 +28,7 @@ namespace Demo.Tests
         public void Funcionario_Habilidades_JuniorNaoDevePossuirHabilidadeAvancada()
         {
             // Arrange & Act
-            var funcionario = FuncionarioFactory.Criar("Eduardo", 1000);
+            var funcionario = FuncionarioFactory.Criar("Matheus", 1000);
 
             // Assert
             Assert.DoesNotContain("Microservices", funcionario.Habilidades);
@@ -38,7 +38,7 @@ namespace Demo.Tests
         public void Funcionario_Habilidades_SeniorDevePossuirTodasHabilidades()
         {
             // Arrange & Act
-            var funcionario = FuncionarioFactory.Criar("Eduardo", 15000);
+            var funcionario = FuncionarioFactory.Criar("Matheus", 15000);
 
             var habilidadesBasicas = new[]
             {

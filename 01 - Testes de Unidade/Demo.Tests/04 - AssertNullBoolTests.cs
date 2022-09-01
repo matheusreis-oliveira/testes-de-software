@@ -18,7 +18,7 @@ namespace Demo.Tests
         public void Funcionario_Apelido_NaoDeveTerApelido()
         {
             // Arrange & Act
-            var funcionario = new Funcionario("Eduardo", 1000);
+            var funcionario = new Funcionario("Matheus", 1000);
 
             // Assert
             Assert.Null(funcionario.Apelido);

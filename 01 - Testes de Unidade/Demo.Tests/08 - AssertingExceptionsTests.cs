@@ -20,7 +20,7 @@ namespace Demo.Tests
         {
             // Arrange & Act & Assert
             var exception =
-                Assert.Throws<Exception>(() => FuncionarioFactory.Criar("Eduardo", 250));
+                Assert.Throws<Exception>(() => FuncionarioFactory.Criar("Matheus", 250));
 
             Assert.Equal("Salario inferior ao permitido", exception.Message);
         }

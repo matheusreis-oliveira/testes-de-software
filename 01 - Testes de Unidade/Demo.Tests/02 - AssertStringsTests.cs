@@ -11,10 +11,10 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
-            Assert.Equal("Eduardo Pires", nomeCompleto);
+            Assert.Equal("Matheus Oliveira", nomeCompleto);
         }
 
         [Fact]
@@ -24,10 +24,10 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
-            Assert.Equal("EDUARDO PIRES", nomeCompleto, true);
+            Assert.Equal("MATHEUS OLIVEIRA", nomeCompleto, true);
         }
 
         [Fact]
@@ -37,10 +37,10 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
-            Assert.Contains("ardo", nomeCompleto);
+            Assert.Contains("ivei", nomeCompleto);
         }
 
         [Fact]
@@ -50,10 +50,10 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
-            Assert.StartsWith("Edu", nomeCompleto);
+            Assert.StartsWith("Mat", nomeCompleto);
         }
 
         [Fact]
@@ -63,10 +63,10 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
-            Assert.EndsWith("res", nomeCompleto);
+            Assert.EndsWith("ira", nomeCompleto);
         }
 
         [Fact]
@@ -76,7 +76,7 @@ namespace Demo.Tests
             var sut = new StringsTools();
 
             // Act
-            var nomeCompleto = sut.Unir("Eduardo", "Pires");
+            var nomeCompleto = sut.Unir("Matheus", "Oliveira");
 
             // Assert
             Assert.Matches("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+", nomeCompleto);

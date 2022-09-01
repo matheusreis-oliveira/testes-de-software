@@ -49,7 +49,10 @@ namespace Demo
                     break;
 
                 case NivelProfissional.Senior:
-                    Habilidades.Add("Testes");
+                    if (!Habilidades.Contains("Testes"))
+                    {
+                        Habilidades.Add("Testes");
+                    }
                     Habilidades.Add("Microservices");
                     break;
             }
